@@ -8,6 +8,9 @@ dependencies:
   '@prisma/client':
     specifier: ^5.1.0
     version: 5.1.0(prisma@5.1.0)
+  '@radix-ui/react-icons':
+    specifier: ^1.3.0
+    version: 1.3.0(react@18.2.0)
   '@types/node':
     specifier: 20.4.5
     version: 20.4.5
@@ -38,9 +41,6 @@ dependencies:
   react-dom:
     specifier: 18.2.0
     version: 18.2.0(react@18.2.0)
-  react-feather:
-    specifier: ^2.0.10
-    version: 2.0.10(react@18.2.0)
   tailwindcss:
     specifier: 3.3.3
     version: 3.3.3
@@ -864,6 +864,14 @@ packages:
   /@prisma/engines@5.1.0:
     resolution: {integrity: sha512-HqaFsnPmZOdMWkPq6tT2eTVTQyaAXEDdKszcZ4yc7DGMBIYRP6j/zAJTtZUG9SsMV8FaucdL5vRyxY/p5Ni28g==}
     requiresBuild: true
+
+  /@radix-ui/react-icons@1.3.0(react@18.2.0):
+    resolution: {integrity: sha512-jQxj/0LKgp+j9BiTXz3O3sgs26RNet2iLWmsPyRz2SIcR4q/4SbazXfnYwbAr+vLYKSfc7qxzyGQA1HLlYiuNw==}
+    peerDependencies:
+      react: ^16.x || ^17.x || ^18.x
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /@rushstack/eslint-patch@1.3.2:
     resolution: {integrity: sha512-V+MvGwaHH03hYhY+k6Ef/xKd6RYlc4q8WBx+2ANmipHJcKuktNcI/NgEsJgdSUF6Lw32njT6OnrRsKYCdgHjYw==}
@@ -3840,15 +3848,6 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
-
-  /react-feather@2.0.10(react@18.2.0):
-    resolution: {integrity: sha512-BLhukwJ+Z92Nmdcs+EMw6dy1Z/VLiJTzEQACDUEnWMClhYnFykJCGWQx+NmwP/qQHGX/5CzQ+TGi8ofg2+HzVQ==}
-    peerDependencies:
-      react: '>=16.8.6'
-    dependencies:
-      prop-types: 15.8.1
-      react: 18.2.0
-    dev: false
 
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
