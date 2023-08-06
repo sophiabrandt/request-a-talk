@@ -1,9 +1,8 @@
 'use client';
 
-import { DotIcon, CheckIcon, Cross2Icon } from '@radix-ui/react-icons';
-import * as ToggleGroup from '@radix-ui/react-toggle-group';
 import talks from './talks.json';
-import { useState } from 'react';
+import { DotIcon, CheckIcon, Cross2Icon } from '@radix-ui/react-icons';
+import { ToggleGroup } from '@/components/toggle-group';
 
 const Page = () => {
   return (
@@ -20,34 +19,15 @@ const Page = () => {
               <p className="text-sm text-sky-300">{talk.duration}</p>
             </div>
             <div>
-              <ToggleGroup.Root
-                type="single"
-                aria-label="talk status"
-                defaultValue="pending"
-                className="inline-flex items-baseline rounded bg-sky-300 px-2 py-1"
-              >
-                <ToggleGroup.Item
-                  value="rejected"
-                  aria-label="rejected"
-                  className="rounded bg-sky-300 text-indigo-900  data-[state=on]:bg-indigo-900 data-[state=on]:text-sky-300"
-                >
-                  <Cross2Icon />
-                </ToggleGroup.Item>
-                <ToggleGroup.Item
-                  value="pending"
-                  aria-label="pending"
-                  className="rounded bg-sky-300 text-indigo-900  data-[state=on]:bg-indigo-900 data-[state=on]:text-sky-300"
-                >
-                  <DotIcon />
-                </ToggleGroup.Item>
-                <ToggleGroup.Item
-                  value="accepted"
-                  aria-label="accepted"
-                  className="rounded bg-sky-300 text-indigo-900  data-[state=on]:bg-indigo-900 data-[state=on]:text-sky-300"
-                >
-                  <CheckIcon />
-                </ToggleGroup.Item>
-              </ToggleGroup.Root>
+              <ToggleGroup
+                ariaLabel="talk status"
+                left={'rejected'}
+                leftIcon={Cross2Icon}
+                center={'pending'}
+                centerIcon={DotIcon}
+                right={'accepted'}
+                rightIcon={CheckIcon}
+              />
             </div>
           </div>
         ))}
